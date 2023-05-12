@@ -1,0 +1,18 @@
+@import "../../../../vendors/mixins";
+@import "../../../../vendors/variables";
+
+.what-is {
+    img {
+        @include imageCover;
+    }
+
+    h2 {
+        font-weight: 600;
+        color: $main-color;
+    }
+
+    p {
+        font-size: 20px;
+        color: $main-color;
+    }
+}

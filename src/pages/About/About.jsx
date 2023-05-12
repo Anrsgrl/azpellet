@@ -1,8 +1,11 @@
 import React from 'react';
+import AboutWhat from './Components/AboutWhat/AboutWhat';
 
 const About = () => {
     return (
-        <div>About</div>
+        <div className="about container">
+            <AboutWhat />
+        </div>
     )
 }
 
