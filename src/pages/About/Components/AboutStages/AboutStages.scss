@@ -1,0 +1,79 @@
+@import "../../../../vendors/mixins";
+@import "../../../../vendors/variables";
+
+.about-stages {
+    @media(max-width: 767px) {
+        display: none;
+    }
+
+    h2 {
+        text-align: center;
+        color: $main-color;
+    }
+
+    .stages-item {
+        @include flexCenter;
+        flex-direction: column;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    p {
+        color: #367461;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.about-stages-mobile {
+    @media(min-width: 767px) {
+        display: none;
+    }
+
+    h2 {
+        font-weight: 600;
+        color: $main-color;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        height: 249px;
+        object-fit: contain;
+
+    }
+
+    .stages-item {
+        @include flexCenter;
+        flex-direction: column;
+        color: $main-color;
+        font-size: 20px;
+    }
+
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        &::after {
+            font-size: 20px;
+        }
+
+        color: $main-color;
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+
+    .swiper-button-prev {
+        left: 0;
+    }
+}
