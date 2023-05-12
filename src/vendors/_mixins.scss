@@ -1,0 +1,23 @@
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin imageCover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin cleanButton {
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+}
