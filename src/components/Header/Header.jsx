@@ -7,7 +7,7 @@ const Header = () => {
             <div className="container">
                 <div className="header-content">
                     <h2>Azleppet</h2>
-                    <ul>
+                    <ul className='p-0 pe-5'>
                         <li><button className='clean-button'>Home</button></li>
                         <li><button className='clean-button'>About</button></li>
                         <li><button className='clean-button'>Contact</button></li>
