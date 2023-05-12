@@ -1,0 +1,32 @@
+@import "../../../vendors/mixins";
+@import "../../../vendors/variables";
+
+.hero {
+    height: 100vh;
+    background-image: url(../../../assets/images/homeBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .hero-content {
+        height: 100%;
+        @include flexCenter;
+        flex-direction: column;
+        gap: 8px;
+        backdrop-filter: brightness(0.5);
+
+        h1,
+        p {
+            margin: 0;
+            color: white;
+        }
+
+        h1 {
+            font-size: 80px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    }
+}
