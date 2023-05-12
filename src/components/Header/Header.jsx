@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Header.scss";
 
 const Header = () => {
+    const [color, setColor] = useState();
+    const changeColor = () => {
+        if (window.scrollY >= 96) {
+            setColor(true);
+        } else {
+            setColor(false);
+        }
+    };
+
+    window.addEventListener('scroll', changeColor);
     return (
-        <header className='py-3'>
+        <header className={color ? "scrolled py-2" : "py-2"}>
             <div className="container">
                 <div className="header-content">
                     <h2>Azleppet</h2>
