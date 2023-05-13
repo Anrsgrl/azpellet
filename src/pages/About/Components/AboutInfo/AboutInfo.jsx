@@ -19,10 +19,10 @@ const AboutInfo = () => {
             </p>
             <h2 className='py-3'>Production</h2>
             <div className="row">
-                <div className="col-12 col-md-7">
+                <div className="col-12 col-lg-7">
                     <img src="https://www.naturallywood.com/wp-content/uploads/wood-pellet-manufacturing.jpg" alt="" className='w-100 h-100' />
                 </div>
-                <div className="col-12 col-md-5">
+                <div className="col-12 col-lg-5">
                     <p>
                         Pellets are produced by compressing the wood material which has first passed through a hammer mill to provide a uniform dough-like mass. This mass is fed to a press, where it is squeezed through a die having holes of the size required (normally 6 mm diameter, sometimes 8 mm or larger). The high pressure of the press causes the temperature of the wood to increase greatly, and the lignin plasticizes slightly, forming a natural "glue" that holds the pellet together as it cools.
                     </p>
