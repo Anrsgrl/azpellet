@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, A11y } from 'swiper';
 import "./AboutInfo.scss"
-
 const AboutInfo = () => {
     const [more, setMore] = useState(false);
     return (
@@ -25,8 +26,29 @@ const AboutInfo = () => {
             }
             <h2 className='py-3'>Production</h2>
             <div className="row">
-                <div className="col-12 col-lg-7">
-                    <img src="https://www.naturallywood.com/wp-content/uploads/wood-pellet-manufacturing.jpg" alt="" className='w-100 h-100' />
+                <div className="col-12 col-lg-7 production-images">
+                    <Swiper
+                        modules={[Navigation, A11y]}
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        navigation
+                    >
+                        <SwiperSlide>
+                            <img src="https://www.naturallywood.com/wp-content/uploads/wood-pellet-manufacturing.jpg" alt="" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="https://www.timberindustrynews.com/wp-content/uploads/2018/01/wood-pellets-734x458.jpg" alt="" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="https://www.globalwoodmarketsinfo.com/wp-content/uploads/2020/03/pellet.jpg" alt="" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="https://img2.exportersindia.com/product_images/bc-full/dir_65/1938995/standards-wood-pellets-1830441.jpg" alt="" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src="https://sc01.alicdn.com/kf/A95e8b98a66334e27962f121efa677563a.jpg" alt="" />
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
                 <div className="col-12 col-lg-5">
                     <p>

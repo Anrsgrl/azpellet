@@ -18,4 +18,35 @@
         font-size: 20px;
         font-weight: 400;
     }
+
+    .production-images {
+        .swiper-slide {
+            img {
+                width: 100%;
+                height: 320px;
+                object-fit: cover;
+
+                @media(min-width: 991px) {
+                    height: 450px;
+                }
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            &::after {
+                font-size: 20px;
+            }
+
+            color: white;
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+    }
 }
