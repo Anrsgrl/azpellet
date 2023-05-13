@@ -2,9 +2,8 @@ import React, { useRef, useState } from 'react'
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
 
-const Contact = () => {
+const Contact = ({ form }) => {
     const [loading, setLoading] = useState(false)
-    const form = useRef();
     const message = useRef();
     const subject = useRef();
     const email = useRef();

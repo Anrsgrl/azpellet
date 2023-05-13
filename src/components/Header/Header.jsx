@@ -4,7 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Header = () => {
+const Header = ({ home, about, form }) => {
     const [color, setColor] = useState();
     const [hamburger, setHamburger] = useState(false);
     const changeColor = () => {
@@ -22,6 +22,13 @@ const Header = () => {
         });
     };
 
+    const scrollToSection = (elementRef) => {
+        window.scrollTo({
+            top: elementRef.current?.offsetTop - 60,
+            behavior: 'smooth'
+        });
+    };
+
     window.addEventListener('scroll', changeColor);
     return (
         <header className={color ? "scrolled py-2" : "py-2"}>
@@ -33,9 +40,9 @@ const Header = () => {
                         </button>
                     </h2>
                     <ul className='p-0 pe-5'>
-                        <li><button className='clean-button'>Home</button></li>
-                        <li><button className='clean-button'>About</button></li>
-                        <li><button className='clean-button'>Contact</button></li>
+                        <li><button onClick={() => scrollToSection(home)} className='clean-button'>Home</button></li>
+                        <li><button onClick={() => scrollToSection(about)} className='clean-button'>About</button></li>
+                        <li><button onClick={() => scrollToSection(form)} className='clean-button'>Contact</button></li>
                     </ul>
                     <div className="header-right">
                         <select name="sort-list" id="sort-list">
@@ -56,9 +63,9 @@ const Header = () => {
                                         }} >
                                         <button className='close-button clean-button' onClick={() => setHamburger(false)}><AiOutlineCloseCircle /></button>
                                         <ul>
-                                            <li><button className='clean-button'>Home</button></li>
-                                            <li><button className='clean-button'>About</button></li>
-                                            <li><button className='clean-button'>Contact</button></li>
+                                            <li><button onClick={() => scrollToSection(home)} className='clean-button'>Home</button></li>
+                                            <li><button onClick={() => scrollToSection(about)} className='clean-button'>About</button></li>
+                                            <li><button onClick={() => scrollToSection(form)} className='clean-button'>Contact</button></li>
                                         </ul>
                                     </motion.aside>}
                             </AnimatePresence>

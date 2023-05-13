@@ -2,9 +2,9 @@ import React from 'react';
 import AboutWhat from './components/HomeWhat/HomeWhat';
 import Hero from './components/Hero/Hero';
 
-const Home = () => {
+const Home = ({ home }) => {
     return (
-        <div className="home">
+        <div ref={home} className="home">
             <Hero />
             <div className="container">
                 <AboutWhat />

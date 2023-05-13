@@ -4,9 +4,9 @@ import AboutStagesMobile from './Components/AboutStages/AboutStagesMobile';
 import AboutServices from './Components/AboutServices/AboutServices';
 import AboutInfo from './Components/AboutInfo/AboutInfo';
 
-const About = () => {
+const About = ({ about }) => {
     return (
-        <div className="about container">
+        <div ref={about} className="about container">
             <AboutStages />
             <AboutStagesMobile />
             <AboutServices />
