@@ -59,7 +59,7 @@ const Header = ({ home, about, form }) => {
                                         animate={{ right: 0, opacity: 1 }}
                                         exit={{ right: -200, opacity: 0 }}
                                         transition={{
-                                            duration: 1.1, opacity: { ease: "linear" },
+                                            duration: 0.3, opacity: { ease: "linear" },
                                         }} >
                                         <button className='close-button clean-button' onClick={() => setHamburger(false)}><AiOutlineCloseCircle /></button>
                                         <ul>
