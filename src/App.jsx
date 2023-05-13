@@ -5,6 +5,8 @@ import Contact from "./pages/Contact/Contact";
 import Header from './components/Header/Header';
 import "./App.scss";
 import 'bootstrap/dist/css/bootstrap.css';
+import Location from './components/Location/Location';
+import Footer from './components/Footer/Footer';
 function App() {
   return (
     <>
@@ -12,6 +14,8 @@ function App() {
       <Home />
       <About />
       <Contact />
+      <Location />
+      <Footer />
     </>
   );
 }
