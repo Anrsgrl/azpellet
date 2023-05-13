@@ -1,2 +1,38 @@
 @import "../../vendors/mixins";
 @import "../../vendors/variables";
+
+footer {
+    .footer-content {
+        padding: 30px 0;
+        border-top: 2px solid rgba(255, 255, 255, 0.08);
+        @include flexBetween;
+
+        @media(max-width: 767px) {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        span {
+            @media (max-width: 767px) {
+                font-size: 15px;
+            }
+        }
+
+        .contact-info {
+            @include flexCenter;
+            gap: 10px;
+
+            svg {
+                width: 25px;
+                height: 25px;
+                fill: $main-color;
+            }
+
+            a {
+                text-decoration: none;
+                color: $main-color;
+                padding-left: 5px;
+            }
+        }
+    }
+}
