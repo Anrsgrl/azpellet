@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./AboutInfo.scss"
 
 const AboutInfo = () => {
+    const [more, setMore] = useState(false);
     return (
         <div className="about-info px-md-5 py-4">
             <h2>Fuel Pellets</h2>
@@ -11,12 +12,17 @@ const AboutInfo = () => {
             <p>
                 In Europe, they are quite popular fuel. In our country, they began to resort to them only recently. This alternative fuel became especially popular when the issue of environmental pollution and the need to use environmentally friendly materials became acute.
             </p>
-            <p>
-                What is the reason for the popularity of fuel pellets? In our country, the popularity of alternative biofuels is just beginning to grow. This is the reason for the many positive aspects of the use of such biofuels.
-            </p>
-            <p>
-                Waste-free production. Wood is a very valuable material, so they try to use it to the maximum. Wood shavings, sawdust, trimmings or chips, inexpensive wood that has nowhere else to use, are used to make fuel. Environmental Safety.
-            </p>
+            {more ? ("") : (<button onClick={() => setMore(true)} className='clean-button'>...more</button>)}
+            {more &&
+                <>
+                    <p>
+                        What is the reason for the popularity of fuel pellets? In our country, the popularity of alternative biofuels is just beginning to grow. This is the reason for the many positive aspects of the use of such biofuels.
+                    </p>
+                    <p>
+                        Waste-free production. Wood is a very valuable material, so they try to use it to the maximum. Wood shavings, sawdust, trimmings or chips, inexpensive wood that has nowhere else to use, are used to make fuel. Environmental Safety.
+                    </p>
+                </>
+            }
             <h2 className='py-3'>Production</h2>
             <div className="row">
                 <div className="col-12 col-lg-7">

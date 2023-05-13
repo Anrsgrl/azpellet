@@ -4,6 +4,11 @@
 .about-info {
     color: $main-color;
 
+    button {
+        color: $main-color !important;
+        font-weight: 500;
+    }
+
     h2 {
         font-weight: 600;
     }
