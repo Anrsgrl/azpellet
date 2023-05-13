@@ -1,0 +1,29 @@
+@import "../../vendors/mixins";
+@import "../../vendors/variables";
+
+.go-to-top {
+    width: 50px;
+    height: 50px;
+    bottom: 18px;
+    right: 18px;
+    position: fixed;
+    color: #fff;
+    font-size: 18px;
+    line-height: 50px;
+    @include flexCenter;
+    text-align: center;
+    background-color: rgba(000, 000, 000, 0.3);
+    opacity: 0.6;
+    border-radius: 50%;
+    border: none;
+    transition: all 300ms ease-in;
+    z-index: 9999;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+
+    &:hover {
+        background-color: #515151;
+    }
+}
