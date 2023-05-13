@@ -24,6 +24,7 @@ const AboutInfo = () => {
                     </p>
                 </>
             }
+            {more && (<button onClick={() => setMore(false)} className='clean-button'>...less</button>)}
             <h2 className='py-3'>Production</h2>
             <div className="row">
                 <div className="col-12 col-lg-7 production-images">
