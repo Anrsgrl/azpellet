@@ -14,7 +14,20 @@ header {
     .header-content {
         @include flexBetween;
 
+        h2 {
+            margin: 0;
+
+            button {
+                color: white;
+                font-weight: 500;
+            }
+        }
+
         ul {
+            @media(max-width: 767px) {
+                display: none;
+            }
+
             list-style: none;
             @include flexCenter;
             margin: 0;
@@ -30,6 +43,77 @@ header {
         select {
             @include cleanButton;
             color: white;
+
+            @media(max-width: 767px) {
+                margin-right: 1rem;
+            }
+
+            option {
+                color: black;
+            }
+        }
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+
+        .hamburger {
+
+            .hamburger-button {
+                height: 25px;
+                border-left: 1px solid #9f9f9f;
+                padding-left: 10px;
+                position: relative;
+                color: white;
+
+                svg {
+                    @include imageCover;
+                }
+            }
+
+            @media (min-width: 769px) {
+                display: none;
+            }
+
+            .close-button {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                color: white;
+                padding: 0;
+                margin: 0;
+
+                svg {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+            aside {
+                position: absolute;
+                height: 100vh;
+                width: 300px;
+                top: 0px;
+                background-color: $main-color;
+                padding: 30px;
+                @include flexCenter;
+                box-shadow: -2px 1px 20px -8px rgba(0, 0, 0, 0.75);
+
+                ul {
+                    list-style: none;
+                    @include flexCenter;
+                    flex-direction: column;
+                    gap: 14px;
+                    padding: 0;
+                    margin: 0;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
         }
     }
 }
