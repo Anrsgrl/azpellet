@@ -1,13 +1,15 @@
 import React from 'react';
 import "./Hero.scss";
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+    const { t } = useTranslation();
     return (
         <div className="hero">
             <div className="hero-content">
                 <div className="container text-center">
-                    <h1>Wood Pellet</h1>
-                    <p>We deliver pellets all over the country by trucks, wagons and containers</p>
+                    <h1>{t('HeroH')}</h1>
+                    <p>{t('HeroP')}</p>
                 </div>
             </div>
         </div>

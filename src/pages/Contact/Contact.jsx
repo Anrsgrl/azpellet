@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react'
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
+import { useTranslation } from 'react-i18next';
 
 const Contact = ({ form }) => {
-    const [loading, setLoading] = useState(false)
+    const { t } = useTranslation();
+    const [loading, setLoading] = useState(false);
     const message = useRef();
     const subject = useRef();
     const email = useRef();
@@ -35,14 +37,14 @@ const Contact = ({ form }) => {
     return (
         <div className="contact container">
             <form className="py-5" ref={form} onSubmit={sendEmail}>
-                <h4 data-aos="zoom-in" className='content-title'>Get in touch</h4>
+                <h4 data-aos="zoom-in" className='content-title'>{t('ContactH')}</h4>
                 <div className="row form-part">
-                    <div data-aos="fade-left" className="col-12 col-md-6"><input ref={name} className='form-item' type="text" placeholder="name" name='user_name' required /></div>
-                    <div data-aos="fade-left" className="col-12 col-md-6"><input ref={email} className='form-item' type="email" placeholder="email" name='user_email' required /></div>
-                    <div data-aos="fade-left" className="col-12"><input ref={subject} className='form-item' type="text" placeholder="subject" name='subject' required /></div>
-                    <div data-aos="fade-left" className="col-12"><textarea ref={message} className='form-item' style={{ height: "165px" }} name="message" cols="30" rows="10" placeholder="message" required></textarea></div>
+                    <div data-aos="fade-left" className="col-12 col-md-6"><input ref={name} className='form-item' type="text" placeholder={t('PH1')} name='user_name' required /></div>
+                    <div data-aos="fade-left" className="col-12 col-md-6"><input ref={email} className='form-item' type="email" placeholder={t('PH2')} name='user_email' required /></div>
+                    <div data-aos="fade-left" className="col-12"><input ref={subject} className='form-item' type="text" placeholder={t('PH3')} name='subject' required /></div>
+                    <div data-aos="fade-left" className="col-12"><textarea ref={message} className='form-item' style={{ height: "165px" }} name="message" cols="30" rows="10" placeholder={t('PH4')} required></textarea></div>
                     <div className="col-12">
-                        <button data-aos="fade-up" className="contact-button">send
+                        <button data-aos="fade-up" className="contact-button">{t('Button')}
                             {loading && <div className="spinner-border ms-1" role="status">
                                 <span className="sr-only"></span>
                             </div>}</button>

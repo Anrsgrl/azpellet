@@ -3,8 +3,10 @@ import "./Header.scss";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const Header = ({ home, about, form }) => {
+    const { t, i18n } = useTranslation();
     const [color, setColor] = useState();
     const [hamburger, setHamburger] = useState(false);
     const changeColor = () => {
@@ -28,6 +30,9 @@ const Header = ({ home, about, form }) => {
             behavior: 'smooth'
         });
     };
+    const clickHandle = (lang) => {
+        i18n.changeLanguage(lang)
+    }
 
     window.addEventListener('scroll', changeColor);
     return (
@@ -40,14 +45,14 @@ const Header = ({ home, about, form }) => {
                         </button>
                     </h2>
                     <ul className='p-0 pe-5'>
-                        <li><button onClick={() => scrollToSection(home)} className='clean-button'>Home</button></li>
-                        <li><button onClick={() => scrollToSection(about)} className='clean-button'>About</button></li>
-                        <li><button onClick={() => scrollToSection(form)} className='clean-button'>Contact</button></li>
+                        <li><button onClick={() => scrollToSection(home)} className='clean-button'>{t('Nav1')}</button></li>
+                        <li><button onClick={() => scrollToSection(about)} className='clean-button'>{t('Nav2')}</button></li>
+                        <li><button onClick={() => scrollToSection(form)} className='clean-button'>{t('Nav3')}</button></li>
                     </ul>
                     <div className="header-right">
-                        <select name="sort-list" id="sort-list">
-                            <option value="en">EN</option>
+                        <select name="sort-list" id="sort-list" onChange={(e) => { clickHandle(e.target.value) }}>
                             <option value="aze">AZE</option>
+                            <option value="en">EN</option>
                             <option value="ru">RU</option>
                         </select>
                         <div className="hamburger">
@@ -63,9 +68,9 @@ const Header = ({ home, about, form }) => {
                                         }} >
                                         <button className='close-button clean-button' onClick={() => setHamburger(false)}><AiOutlineCloseCircle /></button>
                                         <ul>
-                                            <li><button onClick={() => scrollToSection(home)} className='clean-button'>Home</button></li>
-                                            <li><button onClick={() => scrollToSection(about)} className='clean-button'>About</button></li>
-                                            <li><button onClick={() => scrollToSection(form)} className='clean-button'>Contact</button></li>
+                                            <li><button onClick={() => scrollToSection(home)} className='clean-button'>{t('Nav1')}</button></li>
+                                            <li><button onClick={() => scrollToSection(about)} className='clean-button'>{t('Nav2')}</button></li>
+                                            <li><button onClick={() => scrollToSection(form)} className='clean-button'>{t('Nav3')}</button></li>
                                         </ul>
                                     </motion.aside>}
                             </AnimatePresence>
