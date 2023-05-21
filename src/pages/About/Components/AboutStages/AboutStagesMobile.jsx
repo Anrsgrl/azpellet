@@ -5,13 +5,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import tree from "../../../../assets/images/tree.jpg";
 import wood from "../../../../assets/images/wood.png";
-import woodChips from "../../../../assets/images/woodChips.jpeg";
-import woodPellet from "../../../../assets/images/woodPellet.jpeg";
+import woodChips from "../../../../assets/images/woodChips.png";
+import woodPellet from "../../../../assets/images/woodPellet.png";
 
 const AboutStagesMobile = () => {
     return (
         <div className="about-stages-mobile">
-            <h2>Production Stages</h2>
+            <h2 data-aos="zoom-in">Production Stages</h2>
             <Swiper
                 modules={[Navigation, A11y]}
                 spaceBetween={50}
@@ -20,26 +20,26 @@ const AboutStagesMobile = () => {
             >
                 <SwiperSlide>
                     <div className="stages-item p-5">
-                        <img src={tree} alt="tree" />
-                        <p>Tree</p>
+                        <img data-aos="fade-left" src={tree} alt="tree" />
+                        <p data-aos="fade-left">Tree</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="stages-item p-5">
-                        <img src={wood} alt="wood" />
-                        <p>Wood</p>
+                        <img data-aos="fade-left" src={wood} alt="wood" />
+                        <p data-aos="fade-left">Wood</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="stages-item p-5">
-                        <img src={woodChips} alt="woodChips" />
-                        <p>Wood Chips</p>
+                        <img data-aos="fade-left" src={woodChips} alt="woodChips" />
+                        <p data-aos="fade-left">Wood Chips</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="stages-item p-5">
-                        <img src={woodPellet} alt="woodPellet" />
-                        <p>Wood Pellet</p>
+                        <img data-aos="fade-left" src={woodPellet} alt="woodPellet" />
+                        <p data-aos="fade-left">Wood Pellet</p>
                     </div>
                 </SwiperSlide>
             </Swiper>

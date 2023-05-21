@@ -2,8 +2,8 @@ import React from 'react';
 import "./AboutStages.scss";
 import tree from "../../../../assets/images/tree.jpg";
 import wood from "../../../../assets/images/wood.png";
-import woodChips from "../../../../assets/images/woodChips.jpeg";
-import woodPellet from "../../../../assets/images/woodPellet.jpeg";
+import woodChips from "../../../../assets/images/woodChips.png";
+import woodPellet from "../../../../assets/images/woodPellet.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import AboutStagesItem from './AboutStagesItem';
 const AboutStages = () => {

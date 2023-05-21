@@ -12,6 +12,10 @@ body {
     padding: 0;
 }
 
+#root {
+    overflow-x: hidden;
+}
+
 .clean-button {
     @include cleanButton;
 }
