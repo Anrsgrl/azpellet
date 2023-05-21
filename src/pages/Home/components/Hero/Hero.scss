@@ -24,11 +24,19 @@
         h1 {
             font-size: 80px;
             font-weight: 300;
+
+            @media(max-width: 767px) {
+                font-size: 75px;
+            }
         }
 
         p {
             font-size: 25px;
             font-weight: 200;
+
+            @media(max-width: 767px) {
+                font-size: 20px;
+            }
         }
     }
 }
