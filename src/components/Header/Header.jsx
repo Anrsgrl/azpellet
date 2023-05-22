@@ -11,7 +11,7 @@ const Header = ({ home, about, form }) => {
     const [hamburger, setHamburger] = useState(false);
     const changeColor = () => {
         setHamburger(false)
-        if (window.scrollY >= 96) {
+        if (window.scrollY >= 90) {
             setColor(true);
         } else {
             setColor(false);
