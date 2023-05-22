@@ -56,7 +56,7 @@ const Header = ({ home, about, form }) => {
                             <option value="ru">RU</option>
                         </select>
                         <div className="hamburger">
-                            <button className="hamburger-button clean-button" onClick={() => setHamburger(!hamburger)}><GiHamburgerMenu /></button>
+                            <button className="hamburger-button clean-button py-0" onClick={() => setHamburger(!hamburger)}><GiHamburgerMenu /></button>
                             <AnimatePresence>
                                 {hamburger &&
                                     <motion.aside key={hamburger}
