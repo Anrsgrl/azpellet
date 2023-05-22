@@ -3,7 +3,7 @@
 
 .hero {
     height: 100vh;
-    background-image: url(../../../../assets/images/homeBg.jpg);
+    background-image: url(https://woodyfuel.co.uk/wp-content/uploads/2021/08/pellet-table-1-1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -28,6 +28,10 @@
             @media(max-width: 767px) {
                 font-size: 70px;
             }
+
+            @media(max-width: 576px) {
+                font-size: 60px;
+            }
         }
 
         p {
@@ -36,6 +40,10 @@
 
             @media(max-width: 767px) {
                 font-size: 20px;
+            }
+
+            @media(max-width: 576px) {
+                font-size: 15px;
             }
         }
     }
