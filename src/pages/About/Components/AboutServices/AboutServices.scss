@@ -20,5 +20,13 @@
                 font-size: 11px;
             }
         }
+
+        a {
+            color: $main-color;
+
+            &:hover {
+                color: #3674618c;
+            }
+        }
     }
 }
