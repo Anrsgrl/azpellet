@@ -8,9 +8,9 @@ const AboutServicesItem = (props) => {
             <p data-aos="fade-up" className="pt-2 pt-md-0 m-0 ps-2 text-muted text-center">
                 {text}
                 {lang === "aze" ? (
-                    <a className='ps-1' href="MT Group  MMC Uyğunluq sertifikatı.pdf" download="MT Group  MMC Uyğunluq sertifikatı.pdf"> {link} </a>
+                    <a className='ps-1' target='_blank' rel="noreferrer" href="https://drive.google.com/file/d/1ibJycIGbE8pH0PT7CYLlni9cRl9WknoN/view?usp=sharing"> {link} </a>
                 ) : (
-                    <a className='ps-1' href="MT Group  MMC Certificate of Conformity.pdf" download="MT Group  MMC Certificate of Conformity.pdf">{link} </a>
+                    <a className='ps-1' target='_blank' rel="noreferrer" href="https://drive.google.com/file/d/1oIuejhn1eqvdaXQ2jsq1nvNh4tddCRPS/view?usp=share_link" >{link} </a>
                 )}
             </p>
         </div>
