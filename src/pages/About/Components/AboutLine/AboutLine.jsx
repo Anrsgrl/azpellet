@@ -27,7 +27,7 @@ const AboutLine = () => {
                                 <div data-aos="fade-left" className="pt-3 pt-lg-0 col-12 col-sm-6 col-lg-4">
                                     <p className='weight-product m-0'>
                                         <span>
-                                            3000
+                                            300
                                             <sup className='text-white'>
                                                 {t('Ton')}
                                             </sup>
@@ -40,7 +40,7 @@ const AboutLine = () => {
                                 <div data-aos="fade-left" className="col-12 col-sm-6 col-lg-4">
                                     <p className='weight-product m-0'>
                                         <span>
-                                            36000
+                                            3600
                                             <sup className='text-white'>
                                                 {t('Ton')}
                                             </sup>
