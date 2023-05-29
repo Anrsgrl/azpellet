@@ -18,3 +18,7 @@ body {
 .clean-button {
     @include cleanButton;
 }
+
+.text-main {
+    color: rgb(247, 147, 30);
+}
