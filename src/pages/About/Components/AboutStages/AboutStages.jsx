@@ -1,6 +1,6 @@
 import React from 'react';
 import "./AboutStages.scss";
-import tree from "../../../../assets/images/tree.jpg";
+import log from "../../../../assets/images/log.png";
 import wood from "../../../../assets/images/wood.png";
 import woodChips from "../../../../assets/images/woodChips.png";
 import woodPellet from "../../../../assets/images/woodPellet.png";
@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 const AboutStages = () => {
     const { t } = useTranslation();
     return (
-        <div className="about-stages p-5">
+        <div className="about-stages container p-5">
             <div className="row">
                 <AboutStagesItem text={t('Stage3')} image={woodChips} />
                 <AboutStagesItem text={<AiOutlineArrowRight />} y="180deg" />
@@ -20,7 +20,7 @@ const AboutStages = () => {
                 <AboutStagesItem text={<AiOutlineArrowRight />} y="270deg" />
                 <AboutStagesItem text={t('Stage4')} image={woodPellet} />
                 <AboutStagesItem />
-                <AboutStagesItem text={t('Stage1')} image={tree} />
+                <AboutStagesItem text={t('Stage1')} image={log} />
             </div>
         </div>
     )

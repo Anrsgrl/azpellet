@@ -3,7 +3,7 @@ import React from 'react';
 const AboutInfoItem = (props) => {
     const { text } = props;
     return (
-        <p data-aos="fade-left">
+        <p className='text-muted' data-aos="fade-left">
             {text}
         </p>
     )

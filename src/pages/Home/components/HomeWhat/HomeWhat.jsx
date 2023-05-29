@@ -13,7 +13,7 @@ const AboutWhat = () => {
                 </div>
                 <div className="col-12 col-md-6 py-3">
                     <h2 data-aos="fade-left">{t('WhatH')}</h2>
-                    <p data-aos="fade-left">{t('WhatP')}</p>
+                    <p className='text-muted' data-aos="fade-left">{t('WhatP')}</p>
                 </div>
             </div>
         </div>
