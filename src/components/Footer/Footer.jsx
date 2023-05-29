@@ -9,9 +9,9 @@ const Footer = () => {
         <footer>
             <div className="container">
                 <div className="footer-content">
-                    <span>{t('Copyright')}</span>
+                    <span className='footer-item'>{t('Copyright')}</span>
                     <div className="contact-info d-flex flex-column">
-                        <p className='container d-flex justify-content-end w-100'>{t('Seller')}</p>
+                        <p className='container d-flex justify-content-end w-100 footer-item'>{t('Seller')}</p>
                         <p className='d-flex'>
                             <FiMail />
                             <a href="mailto:office@azpellet.com">office@azpellet.com</a>

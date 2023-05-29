@@ -11,6 +11,11 @@
         object-fit: contain;
     }
 
+    .__react_modal_image__modal_content img {
+        width: fit-content !important;
+        height: fit-content !important;
+    }
+
     .pellet-infos {
         flex-direction: column;
 

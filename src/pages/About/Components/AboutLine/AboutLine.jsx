@@ -3,6 +3,7 @@ import "./AboutLine.scss";
 import pelletcover from "../../../../assets/images/pelletcover.png";
 import AboutLineItem from './AboutLineItem';
 import { useTranslation } from 'react-i18next';
+import ModalPhoto from '../../../../components/ModalPhoto/ModalPhoto';
 
 const AboutLine = () => {
     const { t } = useTranslation();
@@ -12,7 +13,8 @@ const AboutLine = () => {
                 <div className="container">
                     <div className="row">
                         <div data-aos="fade-right" className="col-12 col-lg-4">
-                            <img src={pelletcover} alt="" />
+                            <ModalPhoto image={pelletcover} />
+                            {/* <img src={pelletcover} alt="" /> */}
                         </div>
                         <div className="pellet-infos col-12 col-lg-8">
                             <div className="row text-center align-items-center h-100">
