@@ -18,10 +18,7 @@ const AboutInfo2 = () => {
                         navigation
                     >
                         <SwiperSlide>
-                            <img data-aos="fade-right" src="https://www.makinemarket.net/makinemarket/galeri/446035.jpg-agac_pelet_uretim_tesisi.jpg" alt="" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img data-aos="fade-right" src="https://www.guvenalmakine.com/wp-content/uploads/2020/07/pelet-uretim-tesisi-1.jpg" alt="" />
+                            <img data-aos="fade-right" src="https://www.barskras.ru/content/images/136.jpg" alt="" />
                         </SwiperSlide>
                         <SwiperSlide>
                             <img data-aos="fade-right" src="https://www.naturallywood.com/wp-content/uploads/wood-pellet-manufacturing.jpg" alt="" />
@@ -34,9 +31,6 @@ const AboutInfo2 = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <img data-aos="fade-right" src="https://img2.exportersindia.com/product_images/bc-full/dir_65/1938995/standards-wood-pellets-1830441.jpg" alt="" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img data-aos="fade-right" src="https://sc01.alicdn.com/kf/A95e8b98a66334e27962f121efa677563a.jpg" alt="" />
                         </SwiperSlide>
                     </Swiper>
                 </div>

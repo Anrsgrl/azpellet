@@ -76,7 +76,7 @@ form {
         @include flexCenter;
 
         &:hover {
-            background-color: #b88333ea !important;
+            opacity: 0.8 !important;
             border: 0;
         }
 
