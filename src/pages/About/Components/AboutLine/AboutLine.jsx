@@ -16,7 +16,7 @@ const AboutLine = () => {
                         </div>
                         <div className="pellet-infos col-12 col-lg-8">
                             <div className="row text-center align-items-center h-100">
-                                <div className="col-12 col-lg-4">
+                                <div className="col-12 col-lg-5">
                                     <div className="row pt-2">
                                         <AboutLineItem title={t('LineInfo1')} p="6mm" />
                                         <AboutLineItem title={t('LineInfo2')} p="200-300mm" />
@@ -24,10 +24,10 @@ const AboutLine = () => {
                                         <AboutLineItem title={t('LineInfo4')} p="0.63%" />
                                     </div>
                                 </div>
-                                <div data-aos="fade-left" className="pt-3 pt-lg-0 col-12 col-sm-6 col-lg-4">
+                                <div data-aos="fade-left" className="pt-3 pt-lg-0 col-12 col-lg-7">
                                     <p className='weight-product m-0'>
-                                        <span>
-                                            300
+                                        <span className='text-main'>
+                                            900-1000
                                             <sup className='text-white'>
                                                 {t('Ton')}
                                             </sup>
@@ -35,19 +35,6 @@ const AboutLine = () => {
                                     </p>
                                     <p className='weight-info'>
                                         {t('LineContent1')}
-                                    </p>
-                                </div>
-                                <div data-aos="fade-left" className="col-12 col-sm-6 col-lg-4">
-                                    <p className='weight-product m-0'>
-                                        <span>
-                                            3600
-                                            <sup className='text-white'>
-                                                {t('Ton')}
-                                            </sup>
-                                        </span>
-                                    </p>
-                                    <p className='weight-info'>
-                                        {t('LineContent2')}
                                     </p>
                                 </div>
                             </div>

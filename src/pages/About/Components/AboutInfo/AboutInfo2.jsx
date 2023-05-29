@@ -21,7 +21,7 @@ const AboutInfo2 = () => {
                             <img data-aos="fade-right" src="https://www.barskras.ru/content/images/136.jpg" alt="" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img data-aos="fade-right" src="https://www.naturallywood.com/wp-content/uploads/wood-pellet-manufacturing.jpg" alt="" />
+                            <img data-aos="fade-right" src="https://www.kurutma-makineleri.com/wp-content/uploads/2017/12/i_Cay.Pelet_.Makinalari_1445863745.jpg" alt="" />
                         </SwiperSlide>
                         <SwiperSlide>
                             <img data-aos="fade-right" src="https://www.timberindustrynews.com/wp-content/uploads/2018/01/wood-pellets-734x458.jpg" alt="" />
