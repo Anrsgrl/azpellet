@@ -3,6 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, A11y } from 'swiper';
 import { useTranslation } from 'react-i18next';
 import AboutInfoItem from './AboutInfoItem';
+import construction1 from "../../../../assets/images/construction1.png";
+import construction2 from "../../../../assets/images/construction2.png";
+import construction3 from "../../../../assets/images/construction3.png";
+import construction4 from "../../../../assets/images/construction4.png";
+import construction5 from "../../../../assets/images/construction5.png";
 
 const AboutInfo2 = () => {
     const { t } = useTranslation();
@@ -18,19 +23,19 @@ const AboutInfo2 = () => {
                         navigation
                     >
                         <SwiperSlide>
-                            <img data-aos="fade-right" src="https://www.barskras.ru/content/images/136.jpg" alt="" />
+                            <img data-aos="fade-right" src={construction1} alt="construction" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img data-aos="fade-right" src="https://www.kurutma-makineleri.com/wp-content/uploads/2017/12/i_Cay.Pelet_.Makinalari_1445863745.jpg" alt="" />
+                            <img data-aos="fade-right" src={construction2} alt="construction" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img data-aos="fade-right" src="https://www.timberindustrynews.com/wp-content/uploads/2018/01/wood-pellets-734x458.jpg" alt="" />
+                            <img data-aos="fade-right" src={construction3} alt="construction" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img data-aos="fade-right" src="https://www.globalwoodmarketsinfo.com/wp-content/uploads/2020/03/pellet.jpg" alt="" />
+                            <img data-aos="fade-right" src={construction4} alt="construction" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img data-aos="fade-right" src="https://img2.exportersindia.com/product_images/bc-full/dir_65/1938995/standards-wood-pellets-1830441.jpg" alt="" />
+                            <img data-aos="fade-right" src={construction5} alt="construction" />
                         </SwiperSlide>
                     </Swiper>
                 </div>
