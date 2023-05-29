@@ -7,7 +7,7 @@
     "WhatH": "What is Wood Pepper?",
     "WhatP": "Pellet fuels are a type of solid fuel made from compressed organic material. Pellets can be made from any one of five general categories of biomass: industrial waste and co-products, food waste, agricultural residues, energy crops, and untreated lumber.",
     "StagesH": "Production Stages",
-    "Stage1": "Tree",
+    "Stage1": "Pine Logs",
     "Stage2": "Wood",
     "Stage3": "Wood Chips",
     "Stage4": "Wood Pellet",
@@ -15,6 +15,7 @@
     "Services2": "Our products are delivered to the Europe.",
     "Services3": "All of our products are",
     "Services4": "certified.",
+    "Services5": "Our products are made from pine trees",
     "Info1": "Most of all, comfort and warmth are valued in any home. Therefore, before each owner of the house, especially when cold weather approaches, the question arises: how to heat the room. The market offers many options: firewood, coal, gas or peat. Worthy competition with this material can be fuel pellets, pellets of small sizes, made from waste from the woodworking industry.",
     "Info2": " In Europe, they are quite popular fuel. In our country, they began to resort to them only recently. This alternative fuel became especially popular when the issue of environmental pollution and the need to use environmentally friendly materials became acute.",
     "Info3": " What is the reason for the popularity of fuel pellets? In our country, the popularity of alternative biofuels is just beginning to grow. This is the reason for the many positive aspects of the use of such biofuels.",
@@ -30,5 +31,14 @@
     "PH3": "Subject",
     "PH4": "Message",
     "Button": "Send",
-    "Copyright": "Copyright 2023 © All Right Reserved"
+    "Copyright": "Copyright 2023 © All Right Reserved",
+    "LineInfo1": "Diameter:",
+    "LineInfo2": "Length:",
+    "LineInfo3": "Moisture:",
+    "LineInfo4": "Ash:",
+    "LineInfo5": "less than 9%",
+    "LineContent1": "monthly wood pellet production",
+    "LineContent2": "annual wood pellet production",
+    "Ton": "Tone",
+    "Seller": "Exclusive Seller: TTC Montenegro"
 }

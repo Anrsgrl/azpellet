@@ -7,7 +7,7 @@
     "WhatH": "Taxta Qranulu nədir?",
     "WhatP": "Pelet yanacağı, sıxılmış üzvi materialdan əldə edilən bərk yanacaq növüdür. Qranullar beş əsas biokütlə kateqoriyasından hər hansı birindən hazırlana bilər: sənaye tullantıları və yan məhsullar, qida tullantıları, kənd təsərrüfatı tullantıları, enerji bitkiləri və işlənməmiş ağac.",
     "StagesH": "İstehsal mərhələləri",
-    "Stage1": "Ağac",
+    "Stage1": "Şam kötükləri",
     "Stage2": "Odun",
     "Stage3": "Taxta Çipləri",
     "Stage4": "Taxta Qranulları",
@@ -15,6 +15,7 @@
     "Services2": "Məhsullarımız Avropa ərazisinə çatdırılır.",
     "Services3": "Bütün məhsullarımız",
     "Services4": "sertifikatlaşdırılmışdır.",
+    "Services5": "Məhsullarımız şam ağaclarından hazırlanır",
     "Info1": "Hər evdə ən çox rahatlıq və istilik qiymətləndirilir. Buna görə, hər bir ev sahibində, xüsusən soyuq havanın yaxınlaşması ilə sual yaranır: otağı necə qızdırmaq olar. Bazar bir çox seçim təklif edir: odun, kömür, qaz və ya torf. Bu material üçün layiqli rəqabət, yanacaq qranulları, ağac emalı sənayesinin tullantılarından hazırlanmış kiçik qranullar ola bilər.",
     "Info2": "Qranullar, Avropada olduqca populyar bir yanacaqdır. Ölkəmizdə isə onlara yalnız bu yaxınlarda müraciət etməyə başlandı. Bu alternativ yanacaq, ətraf mühitin çirklənməsi problemi və ekoloji cəhətdən təmiz materialların istifadəsi zərurəti kəskin şəkildə ortaya çıxdıqda xüsusilə populyarlaşdı.",
     "Info3": "Yanacaq qranullarının populyarlığının səbəbi nədir? Ölkəmizdə alternativ bioyanacaqların populyarlığı yeni artmağa başlayır. Bu, belə bioyanacaqların istifadəsinin bir çox müsbət cəhətlərinin səbəbidir.",
@@ -30,5 +31,14 @@
     "PH3": "Mövzu",
     "PH4": "Mesaj",
     "Button": "Mesajı Göndər",
-    "Copyright": "Copyright 2023 © Bütün hüquqlar qorunur"
+    "Copyright": "Copyright 2023 © Bütün hüquqlar qorunur",
+    "LineInfo1": "Diametr:",
+    "LineInfo2": "Uzunluq:",
+    "LineInfo3": "Rütubət:",
+    "LineInfo4": "Kül:",
+    "LineInfo5": "9%-dan az",
+    "LineContent1": "aylıq taxta qranul istehsalı",
+    "LineContent2": "illik taxta qranul istehsalı",
+    "Ton": "Ton",
+    "Seller": "Eksklüziv satıcı: TTC Montenegro"
 }
