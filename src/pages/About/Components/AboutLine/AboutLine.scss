@@ -3,6 +3,9 @@
 
 .about-line {
     background: url(../../../../assets/images/linebg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     min-height: 125px;
 
     img {

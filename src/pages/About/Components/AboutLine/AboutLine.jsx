@@ -14,7 +14,6 @@ const AboutLine = () => {
                     <div className="row">
                         <div data-aos="fade-right" className="col-12 col-lg-4">
                             <ModalPhoto image={pelletcover} />
-                            {/* <img src={pelletcover} alt="" /> */}
                         </div>
                         <div className="pellet-infos col-12 col-lg-8">
                             <div className="row text-center align-items-center h-100">
