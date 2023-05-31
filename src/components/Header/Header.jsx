@@ -34,6 +34,14 @@ const Header = ({ home, about, form }) => {
         i18n.changeLanguage(lang)
     }
 
+    const openCertificates = () => {
+        if (i18n.language === "aze") {
+            window.open('https://drive.google.com/file/d/1ibJycIGbE8pH0PT7CYLlni9cRl9WknoN/view')
+        } else {
+            window.open('https://drive.google.com/file/d/1oIuejhn1eqvdaXQ2jsq1nvNh4tddCRPS/view?pli=1')
+        }
+    }
+
     window.addEventListener('scroll', changeColor);
     return (
         <header className={color ? "scrolled py-2" : "py-2"}>
@@ -47,12 +55,13 @@ const Header = ({ home, about, form }) => {
                     <ul className='p-0 pe-5'>
                         <li><button onClick={() => scrollToSection(home)} className='clean-button'>{t('Nav1')}</button></li>
                         <li><button onClick={() => scrollToSection(about)} className='clean-button'>{t('Nav2')}</button></li>
+                        <li><button onClick={() => openCertificates()} className='clean-button'>{t('Nav4')}</button></li>
                         <li><button onClick={() => scrollToSection(form)} className='clean-button'>{t('Nav3')}</button></li>
                     </ul>
                     <div className="header-right">
                         <select name="sort-list" id="sort-list" onChange={(e) => { clickHandle(e.target.value) }}>
-                            <option value="aze">AZE</option>
                             <option value="en">EN</option>
+                            <option value="aze">AZE</option>
                             <option value="ru">RU</option>
                         </select>
                         <div className="hamburger">
@@ -70,6 +79,7 @@ const Header = ({ home, about, form }) => {
                                         <ul>
                                             <li><button onClick={() => scrollToSection(home)} className='clean-button'>{t('Nav1')}</button></li>
                                             <li><button onClick={() => scrollToSection(about)} className='clean-button'>{t('Nav2')}</button></li>
+                                            <li><button onClick={() => openCertificates()} className='clean-button'>{t('Nav4')}</button></li>
                                             <li><button onClick={() => scrollToSection(form)} className='clean-button'>{t('Nav3')}</button></li>
                                         </ul>
                                     </motion.aside>}
