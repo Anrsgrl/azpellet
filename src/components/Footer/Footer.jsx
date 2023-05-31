@@ -9,10 +9,16 @@ const Footer = () => {
         <footer>
             <div className="container">
                 <div className="footer-content">
-                    <span className='footer-item'>{t('Copyright')}</span>
-                    <div className="contact-info d-flex flex-column">
-                        <p className='container d-flex justify-content-end w-100 footer-item'>{t('Seller')}</p>
-                        <p className='d-flex'>
+                    <div className="footer-info pb-2 pb-md-0 flex-column">
+                        <p className='footer-item'>{t('Seller')}</p>
+                        <span className='footer-item'>{t('Copyright')}</span>
+                    </div>
+                    <div className="footer-info flex-column">
+                        <p className='footer-item'>
+                            <FiMail />
+                            <a href="mailto:ttc@azpellet.com">ttc@azpellet.com</a>
+                        </p>
+                        <p className='footer-item'>
                             <FiMail />
                             <a href="mailto:office@azpellet.com">office@azpellet.com</a>
                         </p>
