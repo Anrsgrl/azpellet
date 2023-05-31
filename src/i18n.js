@@ -7,7 +7,7 @@ i18n
     .use(initReactI18next)
     .use(Backend)
     .init({
-        fallbackLng: 'aze',
+        fallbackLng: 'en',
         debug: true,
 
         interpolation: {
