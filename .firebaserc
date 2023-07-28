@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "azpellet-b11d8"
-  }
+    "default": "azpellet-b11d8",
+    "hosting": "azpellet-b11d8"
+  },
+  "targets": {},
+  "etags": {}
 }
