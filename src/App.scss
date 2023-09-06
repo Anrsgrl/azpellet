@@ -22,3 +22,26 @@ body {
 .text-main {
     color: rgb(113, 182, 61);
 }
+
+/* ===== Scrollbar CSS ===== */
+/* width */
+::-webkit-scrollbar {
+    width: 11px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $main-color;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $main-color;
+    opacity: 0.9;
+  }
+  

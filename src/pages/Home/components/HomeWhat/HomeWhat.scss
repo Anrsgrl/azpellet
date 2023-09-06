@@ -4,6 +4,7 @@
 .what-is {
     img {
         @include imageCover;
+        border-radius: 0.25rem;
     }
 
     h2 {

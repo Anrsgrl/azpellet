@@ -7,7 +7,6 @@
 .contact-item {
     display: flex;
     align-items: center;
-
     svg {
         width: 25px;
         height: 25px;
@@ -26,7 +25,6 @@
 .form-item {
     background-color: #fafafa;
     border-bottom: 1px solid #e0e0e0 !important;
-
     &:focus {
         border-bottom: 1px solid $main-color !important;
     }
@@ -52,7 +50,7 @@ form {
         .form-item {
             border: 0;
             outline: 0;
-            border-radius: 0;
+            border-radius: 0.25rem;
             font-size: 15px;
             height: 44px;
             padding: 9px 14px;
