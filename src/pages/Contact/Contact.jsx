@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 const Contact = ({ form }) => {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
+  const [toast, setToast] = useState(false);
+
   const message = useRef();
   const subject = useRef();
   const email = useRef();
@@ -28,6 +30,7 @@ const Contact = ({ form }) => {
           name.current.value = "";
           subject.current.value = "";
           setLoading(false);
+          setToast(true);
         },
         (error) => {
           console.log(error.text);
@@ -84,14 +87,20 @@ const Contact = ({ form }) => {
             ></textarea>
           </div>
           <div className="col-12">
-            <button data-aos="fade-up" className="contact-button">
-              {t("Button")}
-              {loading && (
-                <div className="spinner-border ms-1" role="status">
-                  <span className="sr-only"></span>
-                </div>
-              )}
-            </button>
+            {!toast ? (
+              <button data-aos="fade-up" className="contact-button">
+                {t("Button")}
+                {loading && (
+                  <div className="spinner-border ms-1" role="status">
+                    <span className="sr-only"></span>
+                  </div>
+                )}
+              </button>
+            ) : (
+              <span data-aos="fade-up" className="text-success">
+                {t("Sent")}
+              </span>
+            )}
           </div>
           <input type="hidden" name="made by github/anrsgrl" />
         </div>
