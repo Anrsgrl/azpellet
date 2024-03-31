@@ -9,10 +9,18 @@ const AboutWhat = () => {
     <div className="what-is py-5">
       <div className="row">
         <div data-aos="fade-right" className="col-12 col-md-6">
-          <img src={Whatimg} alt="what-img" />
+          <img
+            loading="lazy"
+            title="What is Wood Pellet?"
+            aria-label="What is Wood Pellet?"
+            src={Whatimg}
+            alt="what-is-field-img"
+          />
         </div>
         <div className="col-12 col-md-6 py-3">
-          <h2 data-aos="fade-left">{t("WhatH")}</h2>
+          <h2 title={t("WhatH")} aria-label={t("WhatH")} data-aos="fade-left">
+            {t("WhatH")}
+          </h2>
           <p className="text-muted" data-aos="fade-left">
             {t("WhatP")}
           </p>

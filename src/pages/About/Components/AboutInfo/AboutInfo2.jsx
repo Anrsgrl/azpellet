@@ -9,11 +9,24 @@ import construction3 from "../../../../assets/images/construction3.webp";
 import construction4 from "../../../../assets/images/construction4.webp";
 import construction5 from "../../../../assets/images/construction5.webp";
 
+const constructions = [
+  construction1,
+  construction2,
+  construction3,
+  construction4,
+  construction5,
+];
+
 const AboutInfo2 = () => {
   const { t } = useTranslation();
   return (
     <div className="container px-md-5 about-production">
-      <h2 data-aos="zoom-in" className="py-4">
+      <h2
+        title={t("InfoH2")}
+        aria-label={t("InfoH2")}
+        data-aos="zoom-in"
+        className="py-4"
+      >
         {t("InfoH2")}
       </h2>
       <div className="row">
@@ -24,41 +37,18 @@ const AboutInfo2 = () => {
             slidesPerView={1}
             navigation
           >
-            <SwiperSlide>
-              <img
-                data-aos="fade-right"
-                src={construction1}
-                alt="construction"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                data-aos="fade-right"
-                src={construction2}
-                alt="construction"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                data-aos="fade-right"
-                src={construction3}
-                alt="construction"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                data-aos="fade-right"
-                src={construction4}
-                alt="construction"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                data-aos="fade-right"
-                src={construction5}
-                alt="construction"
-              />
-            </SwiperSlide>
+            {constructions.map((e, index) => (
+              <SwiperSlide>
+                <img
+                  data-aos="fade-right"
+                  src={e}
+                  alt={`construction ${index + 1}`}
+                  title={`construction ${index + 1}`}
+                  aria-label={`construction ${index + 1}`}
+                  loading="lazy"
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
         <div className="col-12 col-lg-5">

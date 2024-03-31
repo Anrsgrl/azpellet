@@ -2,11 +2,13 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
 import { useTranslation } from "react-i18next";
+import { MdDoDisturbOn } from "react-icons/md";
 
 const Contact = ({ form }) => {
   const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState(false);
+  const [error, setError] = useState(false);
 
   const message = useRef();
   const subject = useRef();
@@ -15,6 +17,19 @@ const Contact = ({ form }) => {
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    const formData = new FormData(form.current);
+    const fromName = formData.get("from_name");
+    const fromEmail = formData.get("from_email");
+    const fromSubject = formData.get("from_subject");
+    const message = formData.get("message");
+
+    if (!fromName || !fromEmail || !fromSubject || !message) {
+      setError(true);
+      return;
+    } else {
+      setError(false);
+    }
     emailjs
       .sendForm(
         "service_59rni3m",
@@ -46,6 +61,8 @@ const Contact = ({ form }) => {
         <div className="row form-part">
           <div data-aos="fade-left" className="col-12 col-md-6">
             <input
+              title={t("PH1")}
+              aria-label={t("PH1")}
               ref={name}
               className="form-item"
               type="text"
@@ -56,6 +73,8 @@ const Contact = ({ form }) => {
           </div>
           <div data-aos="fade-left" className="col-12 col-md-6">
             <input
+              title={t("PH2")}
+              aria-label={t("PH2")}
               ref={email}
               className="form-item"
               type="email"
@@ -66,6 +85,8 @@ const Contact = ({ form }) => {
           </div>
           <div data-aos="fade-left" className="col-12">
             <input
+              title={t("PH3")}
+              aria-label={t("PH3")}
               ref={subject}
               className="form-item"
               type="text"
@@ -83,12 +104,30 @@ const Contact = ({ form }) => {
               cols="30"
               rows="10"
               placeholder={t("PH4")}
+              title={t("PH4")}
+              aria-label={t("PH4")}
               required
             ></textarea>
           </div>
           <div className="col-12">
+            {!loading && error && (
+              <div
+                title={t("Danger")}
+                aria-label={t("Danger")}
+                className="col-12 danger mb-2"
+              >
+                <MdDoDisturbOn className="me-1" />
+                {t("Danger")}
+              </div>
+            )}
             {!toast ? (
-              <button data-aos="fade-up" className="contact-button">
+              <button
+                type="button"
+                aria-label={t("Button")}
+                title={t("Button")}
+                data-aos="fade-up"
+                className="contact-button"
+              >
                 {t("Button")}
                 {loading && (
                   <div className="spinner-border ms-1" role="status">
@@ -97,12 +136,22 @@ const Contact = ({ form }) => {
                 )}
               </button>
             ) : (
-              <span data-aos="fade-up" className="text-success">
+              <span
+                title={t("Sent")}
+                aria-label={t("Sent")}
+                data-aos="fade-up"
+                className="text-success"
+              >
                 {t("Sent")}
               </span>
             )}
           </div>
-          <input type="hidden" name="made by github/anrsgrl" />
+          <input
+            title="made by github/Anrsgrl"
+            aria-label="made by github/Anrsgrl"
+            type="hidden"
+            name="made by github/Anrsgrl"
+          />
         </div>
       </form>
     </div>
