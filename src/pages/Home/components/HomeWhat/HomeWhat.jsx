@@ -1,5 +1,5 @@
 import React from "react";
-import Whatimg from "../../../../assets/images/aboutwhat.jpg";
+import Whatimg from "../../../../assets/images/aboutwhat.webp";
 import "./HomeWhat.scss";
 import { useTranslation } from "react-i18next";
 

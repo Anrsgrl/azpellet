@@ -40,9 +40,9 @@ const Contact = ({ form }) => {
   return (
     <div className="contact container">
       <form className="py-5" ref={form} onSubmit={sendEmail}>
-        <h4 data-aos="zoom-in" className="content-title">
+        <h3 data-aos="zoom-in" className="content-title">
           {t("ContactH")}
-        </h4>
+        </h3>
         <div className="row form-part">
           <div data-aos="fade-left" className="col-12 col-md-6">
             <input
