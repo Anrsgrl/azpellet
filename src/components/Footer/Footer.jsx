@@ -19,11 +19,23 @@ const Footer = () => {
           <div className="footer-info flex-column">
             <p className="footer-item">
               <FiMail />
-              <a href="mailto:ttc@azpellet.com">ttc@azpellet.com</a>
+              <a
+                href="mailto:ttc@azpellet.com"
+                title="ttc@azpellet.com"
+                aria-label="ttc@azpellet.com"
+              >
+                ttc@azpellet.com
+              </a>
             </p>
             <p className="footer-item">
               <FiMail />
-              <a href="mailto:office@azpellet.com">office@azpellet.com</a>
+              <a
+                href="mailto:office@azpellet.com"
+                title="office@azpellet.com"
+                aria-label="office@azpellet.com"
+              >
+                office@azpellet.com
+              </a>
             </p>
           </div>
         </div>
