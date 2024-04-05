@@ -1,21 +1,22 @@
-import React from 'react';
-import { TbTruckDelivery, TbRecycle, TbFileCertificate, TbTree } from "react-icons/tb";
+import React from "react";
 import "./AboutServices.scss";
-import AboutServicesItem from './AboutServicesItem';
-import { useTranslation } from 'react-i18next';
+import AboutServicesItem from "./AboutServicesItem";
+import { services } from "../../../../mocks/services";
 
 const AboutServices = () => {
-    const { t, i18n } = useTranslation();
-    return (
-        <div className="about-services pt-3 pb-5 container">
-            <div className="row">
-                <AboutServicesItem icon={<TbTree />} text={t('Services5')} />
-                <AboutServicesItem icon={<TbRecycle />} text={t('Services1')} />
-                <AboutServicesItem icon={<TbTruckDelivery />} text={t('Services2')} />
-                <AboutServicesItem icon={<TbFileCertificate />} text={t('Services3')} link={t('Services4')} lang={i18n.language} />
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="about-services pt-3 pb-5 container">
+      <div className="row">
+        {services.map((service) => (
+          <AboutServicesItem
+            icon={service.icon}
+            text={service.text}
+            link={service?.link}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default AboutServices;
