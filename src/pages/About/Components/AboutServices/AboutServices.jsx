@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutServices.scss";
 import AboutServicesItem from "./AboutServicesItem";
-import { services } from "../../../../mocks/services";
+import { services } from "../../../../mocks/general";
 
 const AboutServices = () => {
   return (

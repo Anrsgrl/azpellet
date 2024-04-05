@@ -4,6 +4,7 @@ import pelletcover from "../../../../assets/images/pelletcover.webp";
 import AboutLineItem from "./AboutLineItem";
 import { useTranslation } from "react-i18next";
 import ModalPhoto from "../../../../components/ModalPhoto/ModalPhoto";
+import { aboutLine } from "../../../../mocks/general";
 
 const AboutLine = () => {
   const { t } = useTranslation();
@@ -19,10 +20,9 @@ const AboutLine = () => {
               <div className="row text-center align-items-center h-100">
                 <div className="col-12 col-lg-5">
                   <div className="row pt-2">
-                    <AboutLineItem title={t("LineInfo1")} p="6mm" />
-                    <AboutLineItem title={t("LineInfo2")} p="200-300mm" />
-                    <AboutLineItem title={t("LineInfo3")} p={t("LineInfo5")} />
-                    <AboutLineItem title={t("LineInfo4")} p="0.63%" />
+                    {aboutLine.map((item) => (
+                      <AboutLineItem title={item.title} p={item.content} />
+                    ))}
                   </div>
                 </div>
                 <div

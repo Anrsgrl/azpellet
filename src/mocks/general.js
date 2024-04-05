@@ -25,3 +25,22 @@ export const services = [
     link: t("Services4"),
   },
 ];
+
+export const aboutLine = [
+  {
+    title: t("LineInfo1"),
+    content: "6mm",
+  },
+  {
+    title: t("LineInfo2"),
+    content: "200-300mm",
+  },
+  {
+    title: t("LineInfo3"),
+    content: t("LineInfo5"),
+  },
+  {
+    title: t("LineInfo4"),
+    content: "0.63%",
+  },
+];
