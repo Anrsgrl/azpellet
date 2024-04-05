@@ -19,6 +19,8 @@ const AboutServicesItem = (props) => {
         {lang === "aze" ? (
           <a
             className="ps-1"
+            aria-label="Certificate link"
+            title="Certificate link"
             target="_blank"
             rel="noreferrer"
             href="https://drive.google.com/file/d/1ibJycIGbE8pH0PT7CYLlni9cRl9WknoN/view?usp=sharing"
@@ -29,6 +31,8 @@ const AboutServicesItem = (props) => {
         ) : (
           <a
             className="ps-1"
+            aria-label="Certificate link"
+            title="Certificate link"
             target="_blank"
             rel="noreferrer"
             href="https://drive.google.com/file/d/1oIuejhn1eqvdaXQ2jsq1nvNh4tddCRPS/view?usp=share_link"
