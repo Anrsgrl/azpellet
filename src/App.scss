@@ -48,3 +48,17 @@ body {
     opacity: 0.9;
   }
   
+  .card {
+    position: relative;
+    display: flex;
+    width: 395px;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #23406f !important;
+    background-clip: border-box;
+    border: 1px solid #23406f !important;
+    border-radius: 7px;
+    color: white;
+  }
+  
