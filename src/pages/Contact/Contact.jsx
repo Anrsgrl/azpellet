@@ -23,6 +23,25 @@ const Contact = ({ form }) => {
     const fromEmail = formData.get("from_email");
     const fromSubject = formData.get("from_subject");
     const message = formData.get("message");
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!fromName || !fromEmail || !fromSubject || !message) {
+      setError(true);
+      return;
+    } else if (
+      fromName.length < 4 ||
+      fromEmail.length < 4 ||
+      fromSubject.length < 4 ||
+      message.length < 4
+    ) {
+      setError(true);
+      return;
+    } else if (!emailPattern.test(fromEmail)) {
+      setError(true);
+      return;
+    } else {
+      setError(false);
+    }
 
     if (!fromName || !fromEmail || !fromSubject || !message) {
       setError(true);
