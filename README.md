@@ -1,6 +1,6 @@
 ![Azpellet Logo](./src/assets/images/banner.webp)
 
-Azpellet is a platform dedicated to managing projects and providing educational resources. Our platform supports multiple languages to cater to a diverse user base.
+Azpellet is a company dedicated to marketing and managing wood pellet products while providing valuable educational resources.
 
 ## Table of Contents
 
