@@ -29,7 +29,7 @@ const Contact = () => {
         "service_59rni3m",
         "template_fnauhp9",
         document.querySelector("form"),
-        "BK44KEKY-acwTlRTN"
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         () => {
