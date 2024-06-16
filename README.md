@@ -2,6 +2,8 @@
 
 Azpellet is a company dedicated to marketing and managing wood pellet products while providing valuable educational resources.
 
+Due to the company's domain not being renewed, we are currently using an alternative Netlify link.
+
 ## Table of Contents
 
 - [Screenshots](#screenshots)
