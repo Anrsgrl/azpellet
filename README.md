@@ -76,4 +76,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-This project was created some time ago and it was my first major project. There might be some mistakes, and I appreciate your understanding! Thank you for your support.
+This project was created some time ago. There might be some mistakes, and I appreciate your understanding! Thank you for your support.
