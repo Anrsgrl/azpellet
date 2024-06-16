@@ -42,5 +42,13 @@
     "LineContent2": "illik taxta qranul istehsalı",
     "Ton": "Ton",
     "Seller": "Eksklüziv satıcı: TTC Montenegro",
-    "Sent": "Mesaj göndərildi, təşəkkür edirik!"
+    "Sent": "Mesaj göndərildi, təşəkkür edirik!",
+    "NameReq": "Ad vacibdir",
+  "EmailReq": "E-poçt vacibdir",
+  "SubjectReq": "Mövzu vacibdir",
+  "MessageReq": "Mesaj vacibdir",
+  "NameCharacters": "Ad ən azı 4 simvoldan ibarət olmalıdır",
+  "SubjectCharacters": "Mövzu ən azı 4 simvoldan ibarət olmalıdır",
+  "MessageCharacters": "Mesaj ən azı 4 simvoldan ibarət olmalıdır",
+  "InvalidEmail": "Yanlış e-poçt formatı"
 }

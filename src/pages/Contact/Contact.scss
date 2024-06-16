@@ -47,6 +47,9 @@ form {
     }
 
     .form-part {
+        .form-section{
+            margin-bottom: 25px;
+        }
         .form-item {
             border: 0;
             outline: 0;
@@ -55,7 +58,6 @@ form {
             height: 44px;
             padding: 9px 14px;
             width: 100%;
-            margin-bottom: 25px;
             resize: none;
             color: #777;
         }

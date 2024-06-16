@@ -1,68 +1,39 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import "./Contact.scss";
 import { useTranslation } from "react-i18next";
-import { MdDoDisturbOn } from "react-icons/md";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { getSchema } from "../../schema/schema";
 
-const Contact = ({ form }) => {
+const Contact = () => {
   const { t } = useTranslation();
+  const schema = getSchema(t);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState(false);
-  const [error, setError] = useState(false);
 
-  const message = useRef();
-  const subject = useRef();
-  const email = useRef();
-  const name = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const onSubmit = () => {
     setLoading(true);
 
-    const formData = new FormData(form.current);
-    const fromName = formData.get("from_name");
-    const fromEmail = formData.get("from_email");
-    const fromSubject = formData.get("from_subject");
-    const message = formData.get("message");
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!fromName || !fromEmail || !fromSubject || !message) {
-      setError(true);
-      return;
-    } else if (
-      fromName.length < 4 ||
-      fromEmail.length < 4 ||
-      fromSubject.length < 4 ||
-      message.length < 4
-    ) {
-      setError(true);
-      return;
-    } else if (!emailPattern.test(fromEmail)) {
-      setError(true);
-      return;
-    } else {
-      setError(false);
-    }
-
-    if (!fromName || !fromEmail || !fromSubject || !message) {
-      setError(true);
-      return;
-    } else {
-      setError(false);
-    }
     emailjs
       .sendForm(
         "service_59rni3m",
         "template_fnauhp9",
-        form.current,
+        document.querySelector("form"),
         "BK44KEKY-acwTlRTN"
       )
       .then(
         () => {
-          console.log("sent");
-          message.current.value = "";
-          email.current.value = "";
-          name.current.value = "";
-          subject.current.value = "";
+          reset();
           setLoading(false);
           setToast(true);
         },
@@ -71,53 +42,70 @@ const Contact = ({ form }) => {
         }
       );
   };
+
   return (
     <div className="contact container">
-      <form className="py-5" ref={form} onSubmit={sendEmail}>
+      <form className="py-5" onSubmit={handleSubmit(onSubmit)}>
         <h3 data-aos="zoom-in" className="content-title">
           {t("ContactH")}
         </h3>
         <div className="row form-part">
-          <div data-aos="fade-left" className="col-12 col-md-6">
+          <div data-aos="fade-left" className="col-12 col-md-6 mb-3">
             <input
               title={t("PH1")}
               aria-label={t("PH1")}
-              ref={name}
-              className="form-item"
+              className={`form-item form-control ${
+                errors.user_name ? "is-invalid" : ""
+              }`}
               type="text"
               placeholder={t("PH1")}
-              name="user_name"
-              required
+              {...register("user_name")}
             />
+            {errors.user_name && (
+              <div className="invalid-feedback">
+                {t(errors.user_name.message)}
+              </div>
+            )}
           </div>
-          <div data-aos="fade-left" className="col-12 col-md-6">
+          <div data-aos="fade-left" className="col-12 col-md-6 mb-3">
             <input
               title={t("PH2")}
               aria-label={t("PH2")}
-              ref={email}
-              className="form-item"
+              className={`form-item form-control ${
+                errors.user_email ? "is-invalid" : ""
+              }`}
               type="email"
               placeholder={t("PH2")}
-              name="user_email"
-              required
+              {...register("user_email")}
             />
+            {errors.user_email && (
+              <div className="invalid-feedback">
+                {t(errors.user_email.message)}
+              </div>
+            )}
           </div>
-          <div data-aos="fade-left" className="col-12">
+          <div data-aos="fade-left" className="col-12 mb-3">
             <input
               title={t("PH3")}
               aria-label={t("PH3")}
-              ref={subject}
-              className="form-item"
+              className={`form-item form-control ${
+                errors.subject ? "is-invalid" : ""
+              }`}
               type="text"
               placeholder={t("PH3")}
-              name="subject"
-              required
+              {...register("subject")}
             />
+            {errors.subject && (
+              <div className="invalid-feedback">
+                {t(errors.subject.message)}
+              </div>
+            )}
           </div>
-          <div data-aos="fade-left" className="col-12">
+          <div data-aos="fade-left" className="col-12 mb-3">
             <textarea
-              ref={message}
-              className="form-item"
+              className={`form-item form-control ${
+                errors.message ? "is-invalid" : ""
+              }`}
               style={{ height: "165px" }}
               name="message"
               cols="30"
@@ -125,27 +113,22 @@ const Contact = ({ form }) => {
               placeholder={t("PH4")}
               title={t("PH4")}
               aria-label={t("PH4")}
-              required
+              {...register("message")}
             ></textarea>
-          </div>
-          <div className="col-12">
-            {!loading && error && (
-              <div
-                title={t("Danger")}
-                aria-label={t("Danger")}
-                className="col-12 danger mb-2"
-              >
-                <MdDoDisturbOn className="me-1" />
-                {t("Danger")}
+            {errors.message && (
+              <div className="invalid-feedback">
+                {t(errors.message.message)}
               </div>
             )}
+          </div>
+          <div className="col-12">
             {!toast ? (
               <button
-                type="button"
+                type="submit"
                 aria-label={t("Button")}
                 title={t("Button")}
                 data-aos="fade-up"
-                className="contact-button"
+                className="contact-button btn btn-primary"
               >
                 {t("Button")}
                 {loading && (
@@ -165,12 +148,6 @@ const Contact = ({ form }) => {
               </span>
             )}
           </div>
-          <input
-            title="made by github/Anrsgrl"
-            aria-label="made by github/Anrsgrl"
-            type="hidden"
-            name="made by github/Anrsgrl"
-          />
         </div>
       </form>
     </div>

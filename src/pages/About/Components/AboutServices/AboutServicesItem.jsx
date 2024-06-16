@@ -25,7 +25,7 @@ const AboutServicesItem = ({ icon, text, link }) => {
           target="_blank"
           rel="noreferrer"
           href={
-            i18n.language === "aze"
+            i18n.language === "az"
               ? "https://drive.google.com/file/d/1ibJycIGbE8pH0PT7CYLlni9cRl9WknoN/view?usp=sharing"
               : "https://drive.google.com/file/d/1oIuejhn1eqvdaXQ2jsq1nvNh4tddCRPS/view?usp=share_link"
           }

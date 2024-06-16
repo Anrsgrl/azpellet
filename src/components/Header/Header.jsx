@@ -35,7 +35,7 @@ const Header = ({ home, about, form }) => {
   };
 
   const openCertificates = () => {
-    if (i18n.language === "aze") {
+    if (i18n.language === "az") {
       window.open(
         "https://drive.google.com/file/d/1ibJycIGbE8pH0PT7CYLlni9cRl9WknoN/view"
       );
@@ -108,7 +108,7 @@ const Header = ({ home, about, form }) => {
               <option aria-label="EN" title="EN" value="en">
                 EN
               </option>
-              <option aria-label="AZ" title="AZ" value="aze">
+              <option aria-label="AZ" title="AZ" value="az">
                 AZ
               </option>
               <option aria-label="RU" title="RU" value="ru">

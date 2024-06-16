@@ -42,5 +42,13 @@
     "LineContent2": "annual wood pellet production",
     "Ton": "Tone",
     "Seller": "Exclusive Seller: TTC Montenegro",
-    "Sent": "Message sent, thank you!"
+    "Sent": "Message sent, thank you!",
+    "NameReq": "Name is required",
+    "EmailReq": "Email is required",
+    "SubjectReq": "Subject is required",
+    "MessageReq": "Message is required",
+    "NameCharacters": "Name must be at least 4 characters",
+    "SubjectCharacters": "Subject must be at least 4 characters",
+    "MessageCharacters": "Message must be at least 4 characters",
+    "InvalidEmail": "Invalid email format"
 }
